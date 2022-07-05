@@ -68,3 +68,18 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+Task  Description:;
+Convert App into a class component, and add a state object to it with a query text property.
+Create a MyNavbar component for the app, taking as a reference one from the react-bootstrap documentation. Add a text input field to it, with ‘Search here’ as a placeholder.
+Insert the MyNavbar component into the children of App, passing props to it for accessing the query property from the state as well as a method capable of setting the state into App with a new query value. These props are going to be given to the input field into MyNavbar, making it a controlled element.
+Now you should be able to change the query property, into the state of App, from MyNavbar. Pass the query value from the state of App to the BookList component as a prop, so it can access it to restore correctly its filtering logic.
+The next feature will be allowing for one and only selected book at a time. Clicking a new book should de-select the previous one, and load the comments of the freshly selected book.
+
+This will involve elevating the selected state property, previously part of SingleBook, to BookList, storing into it the asin of the currently selected book; for achieving this you can follow a procedure similar to the one you just completed.
+
+ 
+
+EXTRA
+use React.Context for sharing at application level a theme property: the value of theme can be light or dark, and it should affect some styling property of the major components (MyNavbar, BookList, SingleBook etc.).
+Provide a way of toggling the theme value and check if the application responds correctly to the applied style.
